@@ -1,5 +1,7 @@
 import React from 'react'
 import "../css/main.css"
+import RoomIcon from '@material-ui/icons/Room';
+import SearchIcon from '@material-ui/icons/Search';
 
 // import RoomIcon from '@material-ui/icons/Room';
 
@@ -42,7 +44,31 @@ const weather = () => {
             <div className="center_div">
                 <div className="weather_div">
 
-                </div>
+
+                    <div className='date-container'>
+                            <h2>{dayName}</h2>
+                            <span style={{fontSize:"21px",}} > {day} {month} {curYear}</span> <br />
+                            <span style={{fontSize:"18px" , }} > <RoomIcon  style={{fontSize:"18px",marginBottom:'2.2px'}}/> Paris</span>
+
+                     </div>
+
+                    
+
+                    <div class="Hotbg">
+                     <input type="text" name="" class="Hotbg-txt" placeholder="City Name..??"/>
+                         <a href="#" class="Hotbg-btn">
+                          <SearchIcon />
+                         </a>
+                    </div>
+                   
+
+                    
+
+
+                    
+
+                 </div>
+                 
 
             </div>
        </div>

@@ -27,9 +27,105 @@
   border-radius: 15px;
   overflow: hidden;
   padding-top: 20px;
+  transition: transform 300ms ease;
+  display: flex;
+  flex-direction: column;
 }
+/* .center_div:hover {
+  -webkit-transform: scale(1.1) perspective(1500px) rotateY(10deg);
+  transform: scale(1.1) perspective(1500px) rotateY(10deg);
+} */
+
+/* .date-container {
+  float: left;
+  margin-left: 2vw;
+} */
 @media (max-width: 600px) {
   .center_div {
     width: 87vw;
+  }
+  .center_div:hover {
+    transform: scale(1.1) perspective(1500px) rotateY(0deg);
+  }
+}
+
+/* for search iteam */
+
+input::placeholder {
+  color: #573620;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.Hotbg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  height: 6vh;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.Hotbg:hover > .Hotbg-txt {
+  width: 13vw;
+  padding: 0 6px;
+}
+
+.Hotbg:hover > .Hotbg-btn {
+  background: azure;
+  color: black;
+}
+
+.Hotbg-btn {
+  color: #e84118;
+  float: right;
+  width: 2vw;
+  height: 4vh;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: azure;
+  cursor: pointer;
+}
+
+.Hotbg-btn > i {
+  font-size-adjust: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Hotbg-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: azure;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .Hotbg-btn {
+    width: 10vw;
+    height: 5vh;
+  }
+  .Hotbg:hover > .Hotbg-txt {
+    width: 22vw;
+    font-size: 12px;
+  }
+
+  .Hotbg {
+    height: 8.1vh;
   }
 }
