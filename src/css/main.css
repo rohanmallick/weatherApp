@@ -55,6 +55,9 @@
 }
 
 /* for search iteam */
+input {
+  text-align: center;
+}
 
 input::placeholder {
   color: #573620;
@@ -92,7 +95,7 @@ input::placeholder {
   width: 2vw;
   height: 4vh;
   border-radius: 50%;
-  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,7 +158,7 @@ a {
   font-size: 17px;
 }
 .location {
-  font-size: 30px;
+  font-size: 18px;
 }
 .location-icon {
   font-size: 32px;
@@ -188,7 +191,7 @@ for media fontsize */
     font-size: 10px;
   }
   .location {
-    font-size: 20px;
+    font-size: 13px;
   }
   .location-icon {
     font-size: 24px;

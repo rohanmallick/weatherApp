@@ -75,9 +75,9 @@ export const Weather = () => {
 
             <section className="Hotbg">
                      <input type="text" name="" className="Hotbg-txt" placeholder="City Name..??"/>
-                         <span className="Hotbg-btn">
+                         <b className="Hotbg-btn ">
                           <SearchIcon />
-                         </span>
+                         </b>
             </section>
 
 
