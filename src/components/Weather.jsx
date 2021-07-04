@@ -40,26 +40,43 @@ let dayName = days[d.getDay()];
 const weather = () => {
     return (
         <>
-        <div className="main_div">
+        
+        {/* <div className="main_div">
+            
             <div className="center_div">
                 <div className="weather_div">
 
 
-                    <div className='date-container'>
-                            <h2>{dayName}</h2>
-                            <span style={{fontSize:"21px",}} > {day} {month} {curYear}</span> <br />
-                            <span style={{fontSize:"18px" , }} > <RoomIcon  style={{fontSize:"18px",marginBottom:'2.2px'}}/> Paris</span>
+                    <section>
+                     <h1 className='display-4 text-center mb-5'>Weather-App</h1>
 
-                     </div>
+                        <ul className='date-container '>
+                            <li style={{fontSize:"22px",}}>{dayName}</li>
+                            <li style={{fontSize:"19px",}}>{day} {month} {curYear}</li>
+                            <li style={{fontSize:"19px",}} ><RoomIcon  style={{fontSize:"16px",}} /> Paris</li>
+                            
+                        </ul>
+                    
+                    </section>
 
                     
 
-                    <div class="Hotbg">
-                     <input type="text" name="" class="Hotbg-txt" placeholder="City Name..??"/>
-                         <a href="#" class="Hotbg-btn">
+                    <section className="Hotbg">
+                     <input type="text" name="" className="Hotbg-txt" placeholder="City Name..??"/>
+                         <a href="#" className="Hotbg-btn">
                           <SearchIcon />
                          </a>
+                    </section>
+                   
+                    <div className='dates'>
+                        <span>Friday</span><br />
+                        <span>sdgbklsegbp</span>
                     </div>
+
+
+                    
+
+                    
                    
 
                     
@@ -71,7 +88,33 @@ const weather = () => {
                  
 
             </div>
-       </div>
+       </div> */}
+
+
+    <div class="main_div">
+        <div class="center_div">
+            <div class="time">
+     
+                 <p style={{fontSize:"25px",}}>{dayName}</p>
+                 <p style={{fontSize:"19px",}}>{day} {month} {curYear}</p>
+                 <p style={{fontSize:"19px",}}><RoomIcon  style={{fontSize:"16px",}} /> Paris</p>
+            </div>
+
+            <section className="Hotbg">
+                     <input type="text" name="" className="Hotbg-txt" placeholder="City Name..??"/>
+                         <a href="#" className="Hotbg-btn">
+                          <SearchIcon />
+                         </a>
+            </section>
+    
+            <div class="downtime">
+                <p>ha</p>
+                <p>ha</p>
+                <p>hrithik</p>
+            </div>
+  
+        </div>
+    </div>
             
         </>
     )
