@@ -32,8 +32,7 @@
   flex-direction: column; */
 }
 /* .center_div:hover {
-  -webkit-transform: scale(1.1) perspective(1500px) rotateY(10deg);
-  transform: scale(1.1) perspective(1500px) rotateY(10deg);
+  transform: scale(1.1) perspective(1500px) rotateY(0deg);
 } */
 
 .date-container {
@@ -42,13 +41,17 @@
   list-style: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .center_div {
     width: 87vw;
   }
-  .center_div:hover {
-    transform: scale(1.1) perspective(1500px) rotateY(0deg);
+  .main_div {
+    flex-direction: column;
   }
+
+  /* .center_div:hover {
+    transform: scale(1.1) perspective(1500px) rotateY(0deg);
+  } */
 }
 
 /* for search iteam */
@@ -131,10 +134,83 @@ a {
 
   .Hotbg {
     height: 8.1vh;
+    margin-left: 22vh;
+  }
+  .wind {
+    margin-top: 6vh;
   }
 }
 
 /* last part-2 */
+
+/* for font size */
+
+.dayName {
+  font-size: 32px;
+}
+.dayMonthYear {
+  font-size: 19px;
+}
+.ctime {
+  font-size: 17px;
+}
+.location {
+  font-size: 30px;
+}
+.location-icon {
+  font-size: 32px;
+  margin-bottom: 3.5px;
+}
+.weatherType {
+  font-size: 34px;
+}
+.avg-temp {
+  font-size: 24px;
+}
+.windspeed {
+  font-size: 16px;
+}
+.windspeed-icon {
+  font-size: 32px;
+  margin-bottom: 4.5px;
+}
+/* 
+for media fontsize */
+
+@media (max-width: 800px) {
+  .dayName {
+    font-size: 19px;
+  }
+  .dayMonthYear {
+    font-size: 12px;
+  }
+  .ctime {
+    font-size: 10px;
+  }
+  .location {
+    font-size: 20px;
+  }
+  .location-icon {
+    font-size: 24px;
+    margin-bottom: 2.5px;
+  }
+  .weatherType {
+    font-size: 24px;
+  }
+  .avg-temp {
+    font-size: 16px;
+  }
+  .windspeed {
+    font-size: 10px;
+  }
+  .windspeed-icon {
+    font-size: 24px;
+    margin-bottom: 2.5px;
+  }
+  .downtime {
+    font-size: 10px;
+  }
+}
 
 .dates {
   width: 100px;
@@ -152,9 +228,16 @@ a {
 }
 .downtime {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 200px;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  justify-content: space-around;
+  /* width: 200px; */
   margin-left: 20px;
-  margin-top: 42vh;
+  margin-top: 3.2vh;
+  font-size: 17px;
+}
+
+.wind {
+  margin-top: 28vh;
+  margin-bottom: 6vh;
 }

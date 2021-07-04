@@ -1,23 +1,27 @@
-import React from 'react'
+import React ,{ useState }  from 'react'
 import "../css/main.css"
+
+// @material-ui
+
 import RoomIcon from '@material-ui/icons/Room';
 import SearchIcon from '@material-ui/icons/Search';
+import SpeedIcon from '@material-ui/icons/Speed';
+import ArrowRightAltOutlinedIcon from '@material-ui/icons/ArrowRightAltOutlined';
 
-// import RoomIcon from '@material-ui/icons/Room';
+
+
+
 
 // javascirpt for date 
 
-// for year
+
+
+
+
+// for year & date
 
 let curYear = new Date().getFullYear();
-
-// for date
-
 let day = new Date().getDate();
-
-
-
-
 
 // for month
 
@@ -35,82 +39,61 @@ let d = new Date();
 let dayName = days[d.getDay()];
 
 
+
+
  
 
-const weather = () => {
+export const Weather = () => {
+            
+        // for  time 
+        let curTime = new Date().toLocaleTimeString();
+        const [ctime, setCtime] = useState(curTime);
+        const UpdateTime = ()=>{ 
+             let time = new Date().toLocaleTimeString();
+             setCtime(time);
+        }
+        setInterval( UpdateTime,1000 )
+
+
     return (
         <>
         
-        {/* <div className="main_div">
-            
-            <div className="center_div">
-                <div className="weather_div">
 
 
-                    <section>
-                     <h1 className='display-4 text-center mb-5'>Weather-App</h1>
-
-                        <ul className='date-container '>
-                            <li style={{fontSize:"22px",}}>{dayName}</li>
-                            <li style={{fontSize:"19px",}}>{day} {month} {curYear}</li>
-                            <li style={{fontSize:"19px",}} ><RoomIcon  style={{fontSize:"16px",}} /> Paris</li>
-                            
-                        </ul>
-                    
-                    </section>
-
-                    
-
-                    <section className="Hotbg">
-                     <input type="text" name="" className="Hotbg-txt" placeholder="City Name..??"/>
-                         <a href="#" className="Hotbg-btn">
-                          <SearchIcon />
-                         </a>
-                    </section>
-                   
-                    <div className='dates'>
-                        <span>Friday</span><br />
-                        <span>sdgbklsegbp</span>
-                    </div>
+    <div className="main_div">
+        <p className=' display-4 text-light'>This weather app for citys< ArrowRightAltOutlinedIcon style={{fontSize:"48px",color:'white'}}/></p>
+        <div className="center_div">
 
 
-                    
-
-                    
-                   
-
-                    
-
-
-                    
-
-                 </div>
-                 
-
-            </div>
-       </div> */}
-
-
-    <div class="main_div">
-        <div class="center_div">
-            <div class="time">
+            <section className="time">
      
-                 <p style={{fontSize:"25px",}}>{dayName}</p>
-                 <p style={{fontSize:"19px",}}>{day} {month} {curYear}</p>
-                 <p style={{fontSize:"19px",}}><RoomIcon  style={{fontSize:"16px",}} /> Paris</p>
-            </div>
+                 <p className='text-info dayName'>{dayName}</p>
+                 <p className='dayMonthYear'>{day} {month} {curYear}</p>
+                 <p className='text-light ctime'>{ctime} </p>
+                 <p  className='location'><RoomIcon   className='text-warning location-icon' /> Paris</p>
+            </section>
 
             <section className="Hotbg">
                      <input type="text" name="" className="Hotbg-txt" placeholder="City Name..??"/>
-                         <a href="#" className="Hotbg-btn">
+                         <span className="Hotbg-btn">
                           <SearchIcon />
-                         </a>
+                         </span>
             </section>
+
+
+          
+            
+            <div className='text-center wind  ' >
+                <p className='avg-temp'> Average Temp :- <span className='text-success'>1636</span></p>
+            </div>
     
-            <div class="downtime">
-                <p>ha</p>
-                <p>ha</p>
-                <p>hrithik</p>
+            <div className="downtime" >
+                
+                <p style={{float:'left'}}>Max Temp :- <span className='text-danger'>46</span></p>
+                 <p style={{float:'right'}}>Min Temp :- <span className='text-info'>342</span></p>
+            </div>
+            <div className='text-center ' style={{marginBottom:'2vh'}} >
+                <p className='windspeed'> <SpeedIcon className='windspeed-icon ' /> Wind Speed :- <span className='text-warning'>1636</span></p>
             </div>
   
         </div>
@@ -120,4 +103,4 @@ const weather = () => {
     )
 }
 
-export default weather
+export default Weather ;
